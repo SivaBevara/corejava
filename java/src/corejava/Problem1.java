@@ -11,6 +11,7 @@ public class Problem1 {
 		System.out.println("Enter any number: ");
 
 		num = sc.nextInt();
+		//for giving output
 		System.out.println("You Entered: " + num);
 
 		originalNumber = num;
