@@ -6,23 +6,26 @@ public class Problem1 {
 
 	public static void main(String[] args) {
 
-		int num, originalNumber, remainder, result = 0;
+		int num ;
+		int originalNumber;
+		int remainder;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter any number: ");
 
 		num = sc.nextInt();
-		//for giving output
-		System.out.println("You Entered: " + num);
+		
+		System.out.println(" Entered Number: " + num);
 
 		originalNumber = num;
+		int sum=0;
 
 		while (originalNumber != 0) {
 			remainder = originalNumber % 10;
-			result += Math.pow(remainder, 3);
+			sum = sum + remainder*remainder*remainder;
 			originalNumber /= 10;
 
 		}
-		if (result == num)
+		if (sum == num)
 			System.out.println(num + " is an Armstrong number.");
 		else
 			System.out.println(num + " is not an Armstrong number.");
