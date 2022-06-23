@@ -2,28 +2,19 @@ package corejava;
 
 public class Problem2 {
 
-	public static void main(String[] args) {
-		int from = 100, to = 999;
-
-		for (int number = from + 1; number < to; ++number) {
-			int digits = 0;
-			int result = 0;
-			int originalNumber = number;
-
-			while (originalNumber != 0) {
-				originalNumber /= 10;
-				++digits;
-			}
-			originalNumber = number;
-
-			while (originalNumber != 0) {
-				int remainder = originalNumber % 10;
-				result += Math.pow(remainder, digits);
-				originalNumber /= 10;
-			}
-			if (result == number) {
-				System.out.print(number + " ");
-			}
-		}
-	}
+	 public static void main(String[] args) {
+         for (int n = 100; n<1000; n++) {
+             int sum=0;
+             int i=n;
+             while(i>0)
+             {
+                 int dif=i%10;
+                 sum = sum+dif*dif*dif;
+                 i/=10;
+             }
+             if(n==sum){
+                 System.out.println("Armstrong number: "+n);
+             }
+         }
+     }
 }

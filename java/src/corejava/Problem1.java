@@ -22,6 +22,7 @@ public class Problem1 {
 		while (originalNumber != 0) {
 			remainder = originalNumber % 10;
 			sum = sum + remainder*remainder*remainder;
+			//sum += Math.pow(remainder, 4);
 			originalNumber /= 10;
 
 		}
